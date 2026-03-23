@@ -73,8 +73,3 @@ Google Apps Script development and Google Sheets API integration.
 
 Faculty Mentor: Dr. Shahid Wani
 -----
-
-1.  **Badges:** It immediately shows the languages used, which coders look for first.
-2.  **Tech Stack Detail:** It explains *how* you are using Google Sheets as a database, which is a clever "low-code" solution developers will appreciate.
-3.  **Setup Guide:** It tells other developers exactly how to mirror your environment.
-4.  **Architecture Section:** It shows that you understand the flow of data between the UI and the backend.
