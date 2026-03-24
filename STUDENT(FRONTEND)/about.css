@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0b0b14, #141427);
+    background-attachment: fixed;
+    min-height: 100vh;
+    color: #ffffff;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 5%;
+    background-color: #111122;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.6);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #cfcfe6;
+    margin-right: 25px;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #00f5d4;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+#ez {
+    color: #00f5d4;
+}
+
+#head {
+    color: #00f5d4;
+    size: 50px;
+    position: relative;
+    padding: 18px;
+}
+
+#para {
+    padding: 10px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 5%;
+}
+
+#head {
+    font-size: 3rem;
+    color: #ffffff;
+    margin-bottom: 30px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.about-h {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 20px;
+    border-left: 5px solid #00f5d4;
+    margin-bottom: 40px;
+    line-height: 1.8;
+}
+
+.para {
+    font-size: 1.1rem;
+    color: #cfcfe6;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.info-card {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: 0.3s;
+}
+
+.info-card:hover {
+    transform: translateY(-10px);
+    border-color: #00f5d4;
+    background: rgba(0, 245, 212, 0.05);
+}
+
+.info-card h3 {
+    color: #00f5d4;
+    margin-bottom: 15px;
+}
+
+.stats-bar {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background: #111122;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.stat {
+    text-align: center;
+    padding: 10px;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #00f5d4;
+}
+
+.stat-text {
+    font-size: 0.9rem;
+    color: #cfcfe6;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
