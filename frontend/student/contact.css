@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0b0b14, #141427);
+    background-attachment: fixed;
+    min-height: 100vh;
+    color: #ffffff;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 5%;
+    background-color: #111122;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.6);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #cfcfe6;
+    margin-right: 25px;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #00f5d4;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+#ez {
+    color: #00f5d4;
+}
+
+#head {
+    color: #00f5d4;
+    size: 50px;
+    position: relative;
+    padding: 30px;
+}
+
+#para {
+    position: absolute;
+    left: 100000px;
+    padding: 10px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 5%;
+}
+
+#head {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-decoration: none;
+}
+
+/* The Grid System */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Individual Cards */
+.contact-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    transition: 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    border-color: #00f5d4;
+    background: rgba(0, 245, 212, 0.05);
+}
+
+.card-tag {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #00f5d4;
+    color: #0b0b14;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-bottom-left-radius: 10px;
+    text-transform: uppercase;
+}
+
+.contact-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.contact-card p {
+    color: #cfcfe6;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+.call-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #00f5d4;
+    border: 1px solid #00f5d4;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.call-btn:hover {
+    background: #00f5d4;
+    color: #0b0b14;
+}
