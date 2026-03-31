@@ -6,6 +6,8 @@
     box-sizing: border-box;
 }
 
+
+/* ── 2. Base ────────────────────────────────────────────────── */
 body {
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(135deg, #0b0b14, #141427);
@@ -14,6 +16,8 @@ body {
     color: #ffffff;
 }
 
+
+/* ── 3. Navbar (consistent with other pages) ────────────────── */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -31,11 +35,17 @@ body {
     color: #cfcfe6;
     margin-right: 25px;
     font-weight: 500;
-    transition: 0.3s ease;
+    transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
     color: #00f5d4;
+}
+
+.nav-links a.nav-active {
+    color: #00f5d4;
+    border-bottom: 2px solid #00f5d4;
+    padding-bottom: 2px;
 }
 
 .logo {
@@ -44,61 +54,252 @@ body {
     color: #ffffff;
 }
 
-
-
-#ez {
+/* FIX: was id="ez" duplicate — now class="logo-ez" */
+.logo-ez {
     color: #00f5d4;
 }
 
-.container {
-    padding: 50px 5%;
+/* Shared accent class */
+.accent {
+    color: #00f5d4;
 }
 
+
+/* ── 4. Page Header ─────────────────────────────────────────── */
+/*
+   FIX: Was position:absolute; top:80px; left:30px — fragile, overlapped content.
+   FIX: Removed <br> spacer — use padding/margin instead.
+   FIX: Removed <b><u> inline tags — styling done here in CSS.
+*/
+.page-header {
+    text-align: center;
+    padding: 48px 5% 8px;
+}
+
+.page-title {
+    font-size: 2.6rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -0.5px;
+}
+
+.page-subtitle {
+    font-size: 1rem;
+    color: #8a8aaa;
+    margin-top: 8px;
+    font-weight: 400;
+}
+
+
+/* ── 5. Container ───────────────────────────────────────────── */
+.container {
+    padding: 40px 5% 80px;
+}
+
+
+/* ── 6. Card Grid ───────────────────────────────────────────── */
 .card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
 }
 
+
+/* ── 7. Menu Card ───────────────────────────────────────────── */
 .card {
     background: #1a1a2e;
     border-radius: 14px;
     overflow: hidden;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
 }
 
 .card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-8px);
     box-shadow: 0 15px 40px rgba(0, 245, 212, 0.15);
+    border-color: rgba(0, 245, 212, 0.3);
 }
 
+/* ── 7a. Card Image area (emoji placeholder) ─────────────────── */
+/*
+   FIX: Was an empty dark div with no content.
+   Now shows a large emoji as food placeholder until real images are added.
+*/
 .card-img {
-    height: 200px;
-    background: linear-gradient(45deg, #222244, #1b1b2f);
+    height: 160px;
+    background: linear-gradient(45deg, #1c1c38, #222244);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    /* When you have real food images, replace with:
+       background-image: url('your-image.jpg');
+       background-size: cover;
+       background-position: center;
+    */
 }
 
+.card-emoji {
+    /* Prevents emoji from inheriting text color filters */
+    filter: none;
+}
+
+
+/* ── 7b. Card Info ───────────────────────────────────────────── */
 .card-info {
-    padding: 20px;
-    text-align: center;
+    padding: 18px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
 .card-info h3 {
-    margin-bottom: 8px;
-    font-size: 1.2rem;
+    margin-bottom: 6px;
+    font-size: 1.1rem;
     color: #ffffff;
+    font-weight: 600;
 }
 
-.card-info .price {
+.card-desc {
+    font-size: 0.85rem;
+    color: #8a8aaa;
+    line-height: 1.5;
+    flex: 1;
+    margin-bottom: 14px;
+}
+
+/* ── 7c. Card Footer (price + button) ───────────────────────── */
+.card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: auto;
+}
+
+.price {
     color: #00f5d4;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 1.1rem;
 }
 
-#Canteen {
-    padding: 8px;
-    position: absolute;
-    top: 80px;
-    left: 30px;
+/* FIX: No order button existed — added "+ Add" button */
+.order-btn {
+    background: rgba(0, 245, 212, 0.12);
+    color: #00f5d4;
+    border: 1px solid rgba(0, 245, 212, 0.35);
+    padding: 7px 16px;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.25s ease, transform 0.15s ease;
+}
+
+.order-btn:hover {
+    background: rgba(0, 245, 212, 0.22);
+    transform: scale(1.05);
+}
+
+.order-btn:active {
+    transform: scale(0.97);
+}
+
+
+/* ── 8. Cart Bar (sticky bottom) ────────────────────────────── */
+.cart-bar {
+    position: fixed;
+    bottom: -80px;          /* hidden by default */
+    left: 50%;
+    transform: translateX(-50%);
+    background: #111122;
+    border: 1px solid rgba(0, 245, 212, 0.35);
+    border-radius: 50px;
+    padding: 14px 28px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+    transition: bottom 0.35s ease;
+    z-index: 999;
+    white-space: nowrap;
+}
+
+/* JS adds .visible to slide it up */
+.cart-bar.visible {
+    bottom: 24px;
+}
+
+#cart-summary {
+    font-size: 0.95rem;
+    color: #cfcfe6;
+    font-weight: 500;
+}
+
+.cart-checkout {
+    background: #00f5d4;
+    color: #0b0b14;
+    border: none;
+    padding: 9px 20px;
+    border-radius: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: opacity 0.2s ease, transform 0.15s ease;
+}
+
+.cart-checkout:hover {
+    opacity: 0.88;
+    transform: scale(1.03);
+}
+
+
+/* ── 9. Footer ──────────────────────────────────────────────── */
+/* FIX: Footer was outside </html> — moved inside body, styled to match other pages */
+.footer {
+    background-color: #111122;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.82rem;
+    color: #5a5a7a;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+
+/* ── 10. Responsive ─────────────────────────────────────────── */
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 2rem;
+    }
+
+    .card-grid {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 20px;
+    }
+
+    .nav-links a {
+        margin-right: 14px;
+        font-size: 0.9rem;
+    }
+
+    .cart-bar {
+        width: 90%;
+        padding: 12px 20px;
+        gap: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .page-title {
+        font-size: 1.7rem;
+    }
 }

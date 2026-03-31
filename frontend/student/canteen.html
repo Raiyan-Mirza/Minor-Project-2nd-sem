@@ -7,140 +7,256 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Canteen</title>
+    <title>Canteen — Hostel-ez</title>
     <link rel="stylesheet" href="canteen.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
 </head>
 
 <body>
 
+    <!-- ── Navbar ─────────────────────────────────────────── -->
     <nav class="navbar">
         <div class="nav-links">
             <a href="dashboard.html">Home</a>
             <a href="#">Attendance</a>
             <a href="complaint.html">Complaint</a>
-            <a href="canteen.html">Canteen</a>
+            <a href="canteen.html" class="nav-active">Canteen</a>
             <a href="#">Fees</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
         </div>
-        <div class="logo">Hostel<ez id="ez">-ez</ez>
-        </div>
+        <!-- FIX: <ez> → <span>, id="ez" → class="logo-ez" -->
+        <div class="logo">Hostel<span class="logo-ez">-ez</span></div>
     </nav>
 
-    <h1 id="Canteen"><b><u>FOOD & MENU</u></b></h1>
+    <!-- ── Page Header ────────────────────────────────────── -->
+    <!-- FIX: Removed position:absolute, <b><u> tags, and <br> spacer -->
+    <div class="page-header">
+        <h1 class="page-title">Food &amp; <span class="accent">Menu</span></h1>
+        <p class="page-subtitle">Night canteen · Order fresh, delivered to your floor</p>
+    </div>
 
-    <br>
-
+    <!-- ── Menu Grid ──────────────────────────────────────── -->
     <main class="container">
         <div class="card-grid">
 
-            <!-- 15 Cards -->
-            <!-- Row 1 -->
+            <!-- Each card: emoji placeholder instead of empty dark box -->
             <div class="card">
-                <div class="card-img"></div>
+                <div class="card-img" data-emoji="🍕">
+                    <span class="card-emoji">🍕</span>
+                </div>
                 <div class="card-info">
-                    <h3>Item 1</h3>
-                    <p class="price">$29.99</p>
+                    <h3>Veg Pizza</h3>
+                    <p class="card-desc">Freshly baked with mozzarella &amp; veggies</p>
+                    <div class="card-footer">
+                        <p class="price">₹120</p>
+                        <button class="order-btn" onclick="addToCart('Veg Pizza', 120)">+ Add</button>
+                    </div>
                 </div>
             </div>
 
             <div class="card">
-                <div class="card-img"></div>
+                <div class="card-img">
+                    <span class="card-emoji">🍔</span>
+                </div>
                 <div class="card-info">
-                    <h3>Item 2</h3>
-                    <p class="price">$39.99</p>
+                    <h3>Veg Burger</h3>
+                    <p class="card-desc">Crispy patty with lettuce, tomato &amp; sauce</p>
+                    <div class="card-footer">
+                        <p class="price">₹80</p>
+                        <button class="order-btn" onclick="addToCart('Veg Burger', 80)">+ Add</button>
+                    </div>
                 </div>
             </div>
 
             <div class="card">
-                <div class="card-img"></div>
+                <div class="card-img">
+                    <span class="card-emoji">🍜</span>
+                </div>
                 <div class="card-info">
-                    <h3>Item 3</h3>
-                    <p class="price">$49.99</p>
+                    <h3>Maggi Noodles</h3>
+                    <p class="card-desc">Classic masala noodles, late-night favourite</p>
+                    <div class="card-footer">
+                        <p class="price">₹40</p>
+                        <button class="order-btn" onclick="addToCart('Maggi Noodles', 40)">+ Add</button>
+                    </div>
                 </div>
             </div>
 
-            <!-- Row 2 -->
             <div class="card">
-                <div class="card-img"></div>
-                <div class="card-info">
-                    <h3>Item 4</h3>
-                    <p class="price">$19.99</p>
+                <div class="card-img">
+                    <span class="card-emoji">🥪</span>
                 </div>
-            </div>
-            <div class="card">
-                <div class="card-img"></div>
                 <div class="card-info">
-                    <h3>Item 5</h3>
-                    <p class="price">$24.99</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-img"></div>
-                <div class="card-info">
-                    <h3>Item 6</h3>
-                    <p class="price">$59.99</p>
+                    <h3>Grilled Sandwich</h3>
+                    <p class="card-desc">Toasted bread with paneer &amp; chutney</p>
+                    <div class="card-footer">
+                        <p class="price">₹60</p>
+                        <button class="order-btn" onclick="addToCart('Grilled Sandwich', 60)">+ Add</button>
+                    </div>
                 </div>
             </div>
 
-            <!-- Row 3 -->
             <div class="card">
-                <div class="card-img"></div>
-                <div class="card-info">
-                    <h3>Item 7</h3>
-                    <p class="price">$34.99</p>
+                <div class="card-img">
+                    <span class="card-emoji">🍱</span>
                 </div>
-            </div>
-            <div class="card">
-                <div class="card-img"></div>
                 <div class="card-info">
-                    <h3>Item 8</h3>
-                    <p class="price">$44.99</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-img"></div>
-                <div class="card-info">
-                    <h3>Item 9</h3>
-                    <p class="price">$54.99</p>
+                    <h3>Dal Rice Thali</h3>
+                    <p class="card-desc">Home-style dal, rice, sabzi &amp; roti</p>
+                    <div class="card-footer">
+                        <p class="price">₹90</p>
+                        <button class="order-btn" onclick="addToCart('Dal Rice Thali', 90)">+ Add</button>
+                    </div>
                 </div>
             </div>
 
-            <!-- Row 4 -->
             <div class="card">
-                <div class="card-img"></div>
+                <div class="card-img">
+                    <span class="card-emoji">🧃</span>
+                </div>
                 <div class="card-info">
-                    <h3>Item 10</h3>
-                    <p class="price">$21.99</p>
+                    <h3>Juice / Cold Drink</h3>
+                    <p class="card-desc">Chilled beverages — various flavours</p>
+                    <div class="card-footer">
+                        <p class="price">₹30</p>
+                        <button class="order-btn" onclick="addToCart('Juice / Cold Drink', 30)">+ Add</button>
+                    </div>
                 </div>
             </div>
+
             <div class="card">
-                <div class="card-img"></div>
+                <div class="card-img">
+                    <span class="card-emoji">🥗</span>
+                </div>
                 <div class="card-info">
-                    <h3>Item 11</h3>
-                    <p class="price">$27.99</p>
+                    <h3>Veg Salad Bowl</h3>
+                    <p class="card-desc">Fresh seasonal vegetables with lemon dressing</p>
+                    <div class="card-footer">
+                        <p class="price">₹50</p>
+                        <button class="order-btn" onclick="addToCart('Veg Salad Bowl', 50)">+ Add</button>
+                    </div>
                 </div>
             </div>
+
             <div class="card">
-                <div class="card-img"></div>
+                <div class="card-img">
+                    <span class="card-emoji">🍟</span>
+                </div>
                 <div class="card-info">
-                    <h3>Item 12</h3>
-                    <p class="price">$31.99</p>
+                    <h3>French Fries</h3>
+                    <p class="card-desc">Crispy salted fries with ketchup</p>
+                    <div class="card-footer">
+                        <p class="price">₹55</p>
+                        <button class="order-btn" onclick="addToCart('French Fries', 55)">+ Add</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img">
+                    <span class="card-emoji">🍩</span>
+                </div>
+                <div class="card-info">
+                    <h3>Donut / Pastry</h3>
+                    <p class="card-desc">Sweet treats for late-night study sessions</p>
+                    <div class="card-footer">
+                        <p class="price">₹45</p>
+                        <button class="order-btn" onclick="addToCart('Donut / Pastry', 45)">+ Add</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img">
+                    <span class="card-emoji">☕</span>
+                </div>
+                <div class="card-info">
+                    <h3>Tea / Coffee</h3>
+                    <p class="card-desc">Hot masala chai or instant coffee</p>
+                    <div class="card-footer">
+                        <p class="price">₹20</p>
+                        <button class="order-btn" onclick="addToCart('Tea / Coffee', 20)">+ Add</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img">
+                    <span class="card-emoji">🥙</span>
+                </div>
+                <div class="card-info">
+                    <h3>Paneer Roll</h3>
+                    <p class="card-desc">Spiced paneer wrapped in soft paratha</p>
+                    <div class="card-footer">
+                        <p class="price">₹75</p>
+                        <button class="order-btn" onclick="addToCart('Paneer Roll', 75)">+ Add</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img">
+                    <span class="card-emoji">🍦</span>
+                </div>
+                <div class="card-info">
+                    <h3>Ice Cream Cup</h3>
+                    <p class="card-desc">Vanilla, chocolate or mango — single scoop</p>
+                    <div class="card-footer">
+                        <p class="price">₹35</p>
+                        <button class="order-btn" onclick="addToCart('Ice Cream Cup', 35)">+ Add</button>
+                    </div>
                 </div>
             </div>
 
         </div>
     </main>
 
+    <!-- ── Cart Toast ──────────────────────────────────────── -->
+    <div class="cart-bar" id="cart-bar">
+        <span id="cart-summary">🛒 0 items · ₹0</span>
+        <button class="cart-checkout" onclick="checkout()">Place Order →</button>
+    </div>
+
+    <!-- ── Footer ─────────────────────────────────────────── -->
+    <footer class="footer">
+        <p>© 2026 <span class="accent">Hostel-ez</span> · K.R. Mangalam University · All rights reserved</p>
+    </footer>
+
+    <script>
+        // Simple cart state
+        let cart = [];
+
+        function addToCart(name, price) {
+            const existing = cart.find(i => i.name === name);
+            if (existing) {
+                existing.qty++;
+            } else {
+                cart.push({ name, price, qty: 1 });
+            }
+            updateCartBar();
+        }
+
+        function updateCartBar() {
+            const totalItems = cart.reduce((s, i) => s + i.qty, 0);
+            const totalPrice = cart.reduce((s, i) => s + i.price * i.qty, 0);
+            document.getElementById('cart-summary').textContent =
+                `🛒 ${totalItems} item${totalItems !== 1 ? 's' : ''} · ₹${totalPrice}`;
+            document.getElementById('cart-bar').classList.toggle('visible', totalItems > 0);
+        }
+
+        function checkout() {
+            if (cart.length === 0) return;
+            const lines = cart.map(i => `${i.name} x${i.qty} = ₹${i.price * i.qty}`).join('\n');
+            alert(`Order placed!\n\n${lines}\n\nTotal: ₹${cart.reduce((s,i)=>s+i.price*i.qty,0)}`);
+            cart = [];
+            updateCartBar();
+        }
+    </script>
+
 </body>
-
-<footer>
-
-</footer>
-
 </html>
