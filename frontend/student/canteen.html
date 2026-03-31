@@ -17,8 +17,7 @@
 </head>
 
 <body>
-
-    <!-- ── Navbar ─────────────────────────────────────────── -->
+ 
     <nav class="navbar">
         <div class="nav-links">
             <a href="dashboard.html">Home</a>
@@ -28,23 +27,20 @@
             <a href="#">Fees</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
-        </div>
-        <!-- FIX: <ez> → <span>, id="ez" → class="logo-ez" -->
+        </div> 
         <div class="logo">Hostel<span class="logo-ez">-ez</span></div>
     </nav>
-
-    <!-- ── Page Header ────────────────────────────────────── -->
-    <!-- FIX: Removed position:absolute, <b><u> tags, and <br> spacer -->
+ 
     <div class="page-header">
         <h1 class="page-title">Food &amp; <span class="accent">Menu</span></h1>
         <p class="page-subtitle">Night canteen · Order fresh, delivered to your floor</p>
     </div>
 
-    <!-- ── Menu Grid ──────────────────────────────────────── -->
+     
     <main class="container">
         <div class="card-grid">
 
-            <!-- Each card: emoji placeholder instead of empty dark box -->
+  
             <div class="card">
                 <div class="card-img" data-emoji="🍕">
                     <span class="card-emoji">🍕</span>
@@ -215,20 +211,18 @@
 
         </div>
     </main>
-
-    <!-- ── Cart Toast ──────────────────────────────────────── -->
+ 
     <div class="cart-bar" id="cart-bar">
         <span id="cart-summary">🛒 0 items · ₹0</span>
         <button class="cart-checkout" onclick="checkout()">Place Order →</button>
     </div>
-
-    <!-- ── Footer ─────────────────────────────────────────── -->
+ 
     <footer class="footer">
         <p>© 2026 <span class="accent">Hostel-ez</span> · K.R. Mangalam University · All rights reserved</p>
     </footer>
 
     <script>
-        // Simple cart state
+ 
         let cart = [];
 
         function addToCart(name, price) {
