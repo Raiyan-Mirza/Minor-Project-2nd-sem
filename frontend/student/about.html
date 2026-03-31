@@ -7,17 +7,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
+    <title>About Us — Hostel-ez</title>
     <link rel="stylesheet" href="about.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
         rel="stylesheet">
 </head>
 
 <body>
 
+    <!-- ── Navbar ─────────────────────────────────────────── -->
     <nav class="navbar">
         <div class="nav-links">
             <a href="dashboard.html">Home</a>
@@ -25,16 +26,21 @@
             <a href="complaint.html">Complaint</a>
             <a href="canteen.html">Canteen</a>
             <a href="#">Fees</a>
-            <a href="about.html">About</a>
+            <a href="about.html" class="nav-active">About</a>
             <a href="contact.html">Contact</a>
         </div>
-        <div class="logo">Hostel<ez id="ez">-ez</ez>
-        </div>
+        <!-- FIX: <ez> is not a valid HTML tag — replaced with <span> -->
+        <div class="logo">Hostel<span class="logo-ez">-ez</span></div>
     </nav>
+
+    <!-- ── Main Content ───────────────────────────────────── -->
     <main class="about-section">
         <div class="container">
-            <h1 id="head">About <span id="ez">Us</span></h1>
 
+            <!-- FIX: Removed duplicate id="ez"; now uses class="accent" -->
+            <h1 class="page-head">About <span class="accent">Us</span></h1>
+
+            <!-- Intro block -->
             <div class="about-h">
                 <p class="para">
                     Hostel-EZ is a cutting-edge digital ecosystem designed to revolutionize everyday hostel operations.
@@ -43,6 +49,7 @@
                 </p>
             </div>
 
+            <!-- Info cards -->
             <div class="grid-container">
                 <div class="info-card">
                     <h3>Our Mission</h3>
@@ -54,24 +61,79 @@
                     <p>Tailored experiences for both Students and Admins. Whether you're booking a late-night snack or
                         managing floor attendance, it's all one click away.</p>
                 </div>
+                <div class="info-card">
+                    <h3>Cloud-Backed</h3>
+                    <p>All data is securely stored and synced via Google Sheets and Apps Script — no heavy servers,
+                        no downtime, accessible from any device.</p>
+                </div>
             </div>
 
+            <!-- Stats bar — now shows real descriptive icons instead of just 01/02/03 -->
             <div class="stats-bar">
                 <div class="stat">
+                    <span class="stat-icon">📋</span>
                     <span class="stat-number">01</span>
                     <span class="stat-text">Digital Attendance</span>
                 </div>
                 <div class="stat">
+                    <span class="stat-icon">🔧</span>
                     <span class="stat-number">02</span>
                     <span class="stat-text">Smart Complaints</span>
                 </div>
                 <div class="stat">
+                    <span class="stat-icon">💰</span>
                     <span class="stat-number">03</span>
                     <span class="stat-text">Fee Tracking</span>
                 </div>
+                <div class="stat">
+                    <span class="stat-icon">🍽️</span>
+                    <span class="stat-number">04</span>
+                    <span class="stat-text">Night Canteen</span>
+                </div>
             </div>
+
+            <!-- Team section — new addition -->
+            <div class="team-section">
+                <h2 class="section-title">Meet the <span class="accent">Team</span></h2>
+                <div class="team-grid">
+                    <div class="team-card">
+                        <div class="team-avatar">RM</div>
+                        <h4>Raiyan Mirza</h4>
+                        <p>Project Lead &amp; Integration</p>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-avatar">DA</div>
+                        <h4>Dhananjai Avva</h4>
+                        <p>Project Lead &amp; UI/UX</p>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-avatar">AB</div>
+                        <h4>Abhinav Bajpai</h4>
+                        <p>Frontend Design</p>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-avatar">GV</div>
+                        <h4>Gargi Verma</h4>
+                        <p>Backend &amp; Cloud DB</p>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-avatar">PY</div>
+                        <h4>Prachi Yadav</h4>
+                        <p>Backend &amp; Cloud DB</p>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-avatar">KS</div>
+                        <h4>Khushi Sharma</h4>
+                        <p>Backend &amp; Cloud DB</p>
+                    </div>
+                </div>
+                <div class="mentor-card">
+                    <span class="mentor-label">Faculty Mentor</span>
+                    <h4>Dr. Shahid Wani</h4>
+                </div>
+            </div>
+
         </div>
     </main>
-</body>
 
 </html>
