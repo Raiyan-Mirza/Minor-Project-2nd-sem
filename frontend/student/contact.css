@@ -29,11 +29,15 @@ body {
     color: #cfcfe6;
     margin-right: 25px;
     font-weight: 500;
-    transition: 0.3s ease;
+    transition: color 0.3s ease;
 }
 
-.nav-links a:hover {
+.nav-links a:hover { color: #00f5d4; }
+
+.nav-links a.nav-active {
     color: #00f5d4;
+    border-bottom: 2px solid #00f5d4;
+    padding-bottom: 2px;
 }
 
 .logo {
@@ -42,57 +46,52 @@ body {
     color: #ffffff;
 }
 
-#ez {
-    color: #00f5d4;
-}
-
-#head {
-    color: #00f5d4;
-    size: 50px;
-    position: relative;
-    padding: 30px;
-}
-
-#para {
-    position: absolute;
-    left: 100000px;
-    padding: 10px;
-}
+.logo-ez { color: #00f5d4; }
+.accent { color: #00f5d4; }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px 5%;
+    padding: 40px 5% 80px;
 }
 
-#head {
+.page-header {
     text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-    text-decoration: none;
+    margin-bottom: 44px;
 }
 
-/* The Grid System */
+.page-title {
+    font-size: 2.6rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.page-subtitle {
+    font-size: 1rem;
+    color: #8a8aaa;
+}
+
 .contact-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
+    gap: 22px;
+    margin-bottom: 40px;
 }
 
-/* Individual Cards */
 .contact-card {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    padding: 25px;
+    border-radius: 16px;
+    padding: 30px 25px 25px;
     text-align: center;
-    transition: 0.3s ease;
+    transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
     position: relative;
     overflow: hidden;
 }
 
 .contact-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-6px);
     border-color: #00f5d4;
     background: rgba(0, 245, 212, 0.05);
 }
@@ -101,26 +100,40 @@ body {
     position: absolute;
     top: 0;
     right: 0;
-    background: #00f5d4;
-    color: #0b0b14;
     font-size: 10px;
     font-weight: 700;
     padding: 4px 12px;
     border-bottom-left-radius: 10px;
     text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #0b0b14;
+}
+
+.tag-admin { background: #00f5d4; }
+.tag-security { background: #ff5e7d; color: #fff; }
+.tag-boys { background: #7eb8ff; }
+.tag-girls { background: #f5a623; }
+.tag-maintenance { background: #a78bfa; }
+
+.card-icon {
+    font-size: 2rem;
+    margin: 8px 0 14px;
+    display: block;
 }
 
 .contact-card h3 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
     color: #ffffff;
 }
 
-.contact-card p {
+.contact-number {
     color: #cfcfe6;
     font-size: 1rem;
     margin-bottom: 20px;
-    font-weight: 300;
+    font-weight: 400;
+    letter-spacing: 0.5px;
 }
 
 .call-btn {
@@ -128,14 +141,54 @@ body {
     text-decoration: none;
     color: #00f5d4;
     border: 1px solid #00f5d4;
-    padding: 8px 20px;
+    padding: 9px 22px;
     border-radius: 50px;
     font-size: 13px;
     font-weight: 600;
-    transition: 0.3s;
+    transition: background 0.25s ease, color 0.25s ease, transform 0.15s ease;
 }
 
 .call-btn:hover {
     background: #00f5d4;
     color: #0b0b14;
+    transform: scale(1.04);
+}
+
+.emergency-strip {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    background: rgba(255, 94, 125, 0.08);
+    border: 1px solid rgba(255, 94, 125, 0.25);
+    border-radius: 12px;
+    padding: 16px 24px;
+    font-size: 0.9rem;
+}
+
+.emergency-label {
+    font-weight: 600;
+    color: #ff5e7d;
+}
+
+.emergency-divider {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.emergency-number {
+    color: #cfcfe6;
+}
+
+.emergency-number strong {
+    color: #ffffff;
+}
+
+.footer {
+    background-color: #111122;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.82rem;
+    color: #5a5a7a;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
 }

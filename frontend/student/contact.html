@@ -4,13 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Contact — Hostel-ez</title>
     <link rel="stylesheet" href="contact.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -23,75 +21,99 @@
             <a href="canteen.html">Canteen</a>
             <a href="fee.html">Fees</a>
             <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
+            <a href="contact.html" class="nav-active">Contact</a>
         </div>
-        <div class="logo">Hostel<ez id="ez">-ez</ez>
-        </div>
+        <div class="logo">Hostel<span class="logo-ez">-ez</span></div>
     </nav>
 
     <main class="contact-section">
         <div class="container">
-            <h1 id="head">Emergency <span id="ez">Contacts</span></h1>
+
+            <div class="page-header">
+                <h1 class="page-title">Emergency <span class="accent">Contacts</span></h1>
+                <p class="page-subtitle">Reach the right person, right away</p>
+            </div>
 
             <div class="contact-grid">
+
                 <div class="contact-card">
-                    <div class="card-tag">Admin</div>
+                    <div class="card-tag tag-admin">Admin</div>
+                    <div class="card-icon">🏛️</div>
                     <h3>Chief Warden</h3>
-                    <p>90783XXXXX</p>
-                    <a href="tel:90783XXXXX" class="call-btn">Call Now</a>
+                    <p class="contact-number">90783XXXXX</p>
+                    <a href="" class="call-btn">📞 Call Now</a>
                 </div>
 
                 <div class="contact-card">
-                    <div class="card-tag">Security</div>
+                    <div class="card-tag tag-security">Security</div>
+                    <div class="card-icon">🛡️</div>
                     <h3>Chief Guard</h3>
-                    <p>80752XXXXX</p>
-                    <a href="tel:80752XXXXX" class="call-btn">Call Now</a>
+                    <p class="contact-number">80752XXXXX</p>
+                    <a href="" class="call-btn">📞 Call Now</a>
                 </div>
 
                 <div class="contact-card">
-                    <div class="card-tag">Security</div>
+                    <div class="card-tag tag-security">Security</div>
+                    <div class="card-icon">🚨</div>
                     <h3>Guard Room</h3>
-                    <p>12345678XX</p>
-                    <a href="tel:12345678XX" class="call-btn">Call Now</a>
+                    <p class="contact-number">12345678XX</p>
+                    <a href="" class="call-btn">📞 Call Now</a>
                 </div>
 
                 <div class="contact-card">
-                    <div class="card-tag">Boys Hostel</div>
+                    <div class="card-tag tag-boys">Boys Hostel</div>
+                    <div class="card-icon">🏠</div>
                     <h3>Warden</h3>
-                    <p>568929XXXX</p>
-                    <a href="tel:568929XXXX" class="call-btn">Call Now</a>
+                    <p class="contact-number">568929XXXX</p>
+                    <a href="" class="call-btn">📞 Call Now</a>
                 </div>
 
                 <div class="contact-card">
-                    <div class="card-tag">Boys Hostel</div>
+                    <div class="card-tag tag-boys">Boys Hostel</div>
+                    <div class="card-icon">👨‍💼</div>
                     <h3>Asst. Warden</h3>
-                    <p>784920XXXX</p>
-                    <a href="tel:784920XXXX" class="call-btn">Call Now</a>
+                    <p class="contact-number">784920XXXX</p>
+                    <a href="" class="call-btn">📞 Call Now</a>
                 </div>
 
                 <div class="contact-card">
-                    <div class="card-tag">Girls Hostel</div>
+                    <div class="card-tag tag-girls">Girls Hostel</div>
+                    <div class="card-icon">🏠</div>
                     <h3>Warden</h3>
-                    <p>67890XXXXX</p>
-                    <a href="tel:67890XXXXX" class="call-btn">Call Now</a>
+                    <p class="contact-number">67890XXXXX</p>
+                    <a href="" class="call-btn">📞 Call Now</a>
                 </div>
 
                 <div class="contact-card">
-                    <div class="card-tag">Girls Hostel</div>
+                    <div class="card-tag tag-girls">Girls Hostel</div>
+                    <div class="card-icon">👩‍💼</div>
                     <h3>Asst. Warden</h3>
-                    <p>784920XXXX</p>
-                    <a href="tel:784920XXXX" class="call-btn">Call Now</a>
+                    <p class="contact-number">784920XXXX</p>
+                    <a href="" class="call-btn">📞 Call Now</a>
                 </div>
 
                 <div class="contact-card">
-                    <div class="card-tag">Maintenance</div>
+                    <div class="card-tag tag-maintenance">Maintenance</div>
+                    <div class="card-icon">🔧</div>
                     <h3>Housekeeping</h3>
-                    <p>4567890XXXX</p>
-                    <a href="tel:4567890XXXX" class="call-btn">Call Now</a>
+                    <p class="contact-number">4567890XXXX</p>
+                    <a href="" class="call-btn">📞 Call Now</a>
                 </div>
+
             </div>
+
+            <div class="emergency-strip">
+                <span class="emergency-label">🚑 Medical Emergency</span>
+                <span class="emergency-divider">|</span>
+                <span class="emergency-number">Dial <strong>112</strong> · Campus Clinic: <strong>1800-XXX-XXXX</strong></span>
+            </div>
+
         </div>
     </main>
-</body>
 
+    <footer class="footer">
+        <p>© 2026 <span class="accent">Hostel-ez</span> · K.R. Mangalam University · All rights reserved</p>
+    </footer>
+
+</body>
 </html>
