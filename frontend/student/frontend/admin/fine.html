@@ -1,1 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fine Management — Hostel-ez</title>
 
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="nav-links">
+        <a href="admin.html">Dashboard</a>
+        <a href="#">Students</a>
+        <a href="#">Rooms</a>
+        <a href="#">Complaints</a>
+        <a href="#" class="nav-active">Fines</a>
+    </div>
+    <div class="logo">Hostel<span class="logo-ez">-ez</span></div>
+</nav>
+
+<main class="dashboard-container">
+
+    <!-- HEADER -->
+    <div class="welcome-header">
+        <h1>Fine Management</h1>
+        <p>Manage student fines and penalties</p>
+    </div>
+
+    <!-- ADD BUTTON -->
+    <div class="add-btn-container">
+        <button class="add-btn">➕ Add Fine</button>
+    </div>
+
+    <!-- TABLE -->
+    <div class="content-box">
+
+        <table class="fine-table">
+            <thead>
+                <tr>
+                    <th>Student</th>
+                    <th>Roll Number</th>
+                    <th>Room</th>
+                    <th>Reason</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                    
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Rayian Mirza</td>
+                    <td>2501010224</td>
+                    <td>B-204</td>
+                    <td>Late Entry</td>
+                    <td>₹200</td>
+                    <td><span class="badge badge-pending">Pending</span></td>
+                </tr>
+
+                <tr>
+                    <td>Prachi</td>
+                    <td>2501010225</td>
+                    <td>C-102</td>
+                    <td>Damage Charges</td>
+                    <td>₹500</td>
+                    <td><span class="badge badge-paid">Paid</span></td>
+                </tr>
+
+                <tr>
+                    <td>Gargi Verma</td>
+                    <td>2501010223</td>
+                    <td>A-305</td>
+                    <td>Mess Violation</td>
+                    <td>₹100</td>
+                    <td><span class="badge badge-pending">Pending</span></td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+</main>
+
+<footer class="footer">
+    <p>© 2026 <span class="accent">Hostel-ez</span> · Fine Management</p>
+</footer>
+
+</body>
+</html>
