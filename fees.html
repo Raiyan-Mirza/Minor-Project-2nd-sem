@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin — Fees Dashboard</title>
+    <link rel="stylesheet" href="fees.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="nav-links">
+        <a href="admin-dashboard.html">Home</a>
+        <a href="admin-students.html">Students</a>
+        <a href="admin-attendance.html">Attendance</a>
+        <a href="admin-complaints.html">Complaints</a>
+        <a href="admin-fees.html" class="nav-active">Fees</a>
+        <a href="admin-reports.html">Reports</a>
+        <a href="admin-settings.html">Settings</a>
+    </div>
+    <div class="logo">Hostel<span class="logo-ez">-ez</span></div>
+</nav>
+
+<main class="container">
+
+    <div class="page-header">
+        <h1 class="page-title">Admin Fee <span class="accent">Dashboard</span></h1>
+        <p class="page-subtitle">Manage students’ fees, update statuses, and generate reports</p>
+    </div>
+
+    <div class="search-bar">
+        <input type="text" placeholder="Search by name, room, or roll number..." id="searchInput">
+        <button onclick="handleSearch()">Search</button>
+    </div>
+
+    <div class="fee-table-wrap">
+        <table class="fee-table">
+            <thead>
+                <tr>
+                    <th>Student Name</th>
+                    <th>Roll No.</th>
+                    <th>Room No.</th>
+                    <th>Total Fees</th>
+                    <th>Paid</th>
+                    <th>Due</th>
+                    <th>Overdue Fine</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Raiyan Mirza</td>
+                    <td>2024BTECH1234</td>
+                    <td>B-204</td>
+                    <td>₹23,500</td>
+                    <td>₹5,000</td>
+                    <td>₹18,500</td>
+                    <td>₹400</td>
+                    <td><span class="badge badge-due">Due</span></td>
+                    <td>
+                        <button class="update-btn" onclick="handleUpdate(this)">Update</button>
+                        <button class="delete-btn" onclick="handleDelete(this)">Delete</button>
+                    </td>
+                </tr>
+                <!-- Add more rows dynamically -->
+            </tbody>
+        </table>
+    </div>
+
+    <div class="admin-actions">
+        <button class="add-fee-btn" onclick="handleAddFee()">+ Add Fee Head</button>
+        <button class="download-btn" onclick="handleDownload()">Download CSV</button>
+    </div>
+
+</main>
+
+<footer class="footer">
+    <p>© 2026 <span class="accent">Hostel-ez</span> · K.R. Mangalam University · All rights reserved</p>
+</footer>
+
+
+
+</body>
+</html>
