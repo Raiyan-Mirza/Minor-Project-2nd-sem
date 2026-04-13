@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Complaints — Hostel-ez</title>
+    <link rel="stylesheet" href="complaint.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="dashboard.html">Home</a>
+            <a href="attendance.html">Attendance</a>
+            <a href="complaint.html" class="nav-active">Complaints</a>
+            <a href="canteen.html">Canteen</a>
+            <a href="fee.html">Fees</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="logo">Hostel<span class="logo-ez">-ez</span></div>
+    </nav>
+
+    <div class="page-header">
+        <h1 class="page-title">Student <span class="accent">Complaints</span></h1>
+        <p class="page-subtitle">View and manage all student complaints submitted via the portal</p>
+    </div>
+
+    <main class="container">
+        <div class="complaint-table-container">
+            <table class="complaint-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Student Name</th>
+                        <th>Room No</th>
+                        <th>Type</th>
+                        <th>Complaint</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>001</td>
+                        <td>Vansh viraj bisht</td>
+                        <td>209</td>
+                        <td>Maintenance</td>
+                        <td>Leaking tap in washroom</td>
+                        <td><span class="status pending">Pending</span></td>
+                        <td>
+                            <button class="resolve-btn" onclick="markResolved(this)">Resolve</button>
+                            <button class="delete-btn" onclick="deleteComplaint(this)">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>002</td>
+                        <td>Adarsh singh</td>
+                        <td>208</td>
+                        <td>Canteen</td>
+                        <td>Food delivered cold</td>
+                        <td><span class="status pending">Pending</span></td>
+                        <td>
+                            <button class="resolve-btn" onclick="markResolved(this)">Resolve</button>
+                            <button class="delete-btn" onclick="deleteComplaint(this)">Delete</button>
+                        </td>
+                    </tr>
+                    <!-- More rows can be added dynamically -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 <span class="accent">Hostel-ez</span> · K.R. Mangalam University · All rights reserved</p>
+    </footer>
+
+  
+
+</body>
+</html>
